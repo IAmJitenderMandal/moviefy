@@ -1,0 +1,29 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+    .inner-container {
+        display: flex;
+        color: #141414;
+
+        span {
+            display: inline-block;
+            margin: 0rem 1rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .previous,
+        .next {
+            background: #141414;
+            color: #ffffff;
+            padding: 0.7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

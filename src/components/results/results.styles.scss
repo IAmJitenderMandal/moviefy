@@ -1,0 +1,11 @@
+.results {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.results .card {
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}

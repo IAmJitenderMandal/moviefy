@@ -1,0 +1,23 @@
+.filteration {
+    display: flex;
+    justify-content: space-between;
+
+    .search-results {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .filters {
+        display: flex;
+
+        select {
+            border-radius: 0.5rem;
+            margin-left: 2rem;
+            padding: 0.5rem 1rem;
+            background-color: transparent;
+            border-color: #141414;
+            color: #141414;
+        }
+
+    }
+}

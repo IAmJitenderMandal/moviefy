@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./app.css";
 
-function App() {
+import requests from "./requests";
+
+// custom component
+import Sidebar from "./components/sidebar/Sidebar.component";
+import Navigation from "./components/navigation/Navigation.component";
+import Filter from "./components/filter/Filter.component";
+import Pagination from "./components/pagination/Pagination.component";
+import Results from "./components/results/Results.component";
+
+export default function App() {
+  const [SelectedOption, setSelectedOption] = useState(requests.fetchTrending);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="layout">
+        <div className="left">
+          <Sidebar />
+        </div>
+        <div className="right">
+          <Navigation />
+          <Filter />
+          <Results selectedOption={SelectedOption} />
+          <Pagination />
+        </div>
+      </div>
     </div>
   );
 }
-
-export default App;
